@@ -3,8 +3,9 @@ package io.microsamples.cache.geodedemo;
 import lombok.*;
 import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.gemfire.mapping.Indexed;
-import org.springframework.data.gemfire.mapping.Region;
+import org.springframework.data.gemfire.mapping.annotation.Indexed;
+import org.springframework.data.gemfire.mapping.annotation.Region;
+
 
 import java.io.Serializable;
 
