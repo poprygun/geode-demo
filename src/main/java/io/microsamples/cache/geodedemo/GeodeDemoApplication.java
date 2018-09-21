@@ -36,11 +36,11 @@ public class GeodeDemoApplication {
 
 			Track track = new Track().setId(1L).setName("B-2");
 
-			System.err.printf("Saving Customer [%s]...%n", track);
+			log.info("Saving Customer [%s]...%n", track);
 
 			track = trackRepository.save(track);
 
-			System.err.println("Querying for Customer [SELECT * FROM /Tracks WHERE name LIKE '%Doe']...");
+			log.info("Querying for Customer [SELECT * FROM /Tracks WHERE name LIKE '%Doe']...");
 
 			Track foundTrack = trackRepository.findByNameLike("%B-2");
 
