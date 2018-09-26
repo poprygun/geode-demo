@@ -21,7 +21,7 @@ gfsh>start server --name=ServerOne --log-level=config
 >capture locator host an port
 
 ```bash
-gfsh>create region --name=Tracks
+gfsh>create region --name=Tracks --type=REPLICATE
 ```
 
 ## Gemfire pool configuration

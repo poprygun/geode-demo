@@ -38,8 +38,6 @@ public class GeodeDemoApplication {
 
 			track = trackRepository.save(track);
 
-			log.info("Querying for Customer [SELECT * FROM /Tracks WHERE name LIKE '%Doe']...");
-
 			Track foundTrack = trackRepository.findByNameLike("%B-2");
 
 			log.debug("Found track -----> {}", foundTrack);
