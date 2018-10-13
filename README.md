@@ -29,8 +29,20 @@ gfsh>create region --name=Tracks --type=REPLICATE
 Host and Port for `server` and `locator` are configured in application.properties
 
 ```properties
-gemfire.cache.server.host=localhost
-gemfire.cache.server.port=40404
+spring.data.gemfire.pool.locators=localhost[10334]
+spring.data.gemfire.security.username=myuser
+spring.data.gemfire.security.password=mypassword
+```
+
+Alternatively, annotations could be used
+
+```java
+@ClientCacheApplication(name = "AccessingDataGemFireApplication",
+        logLevel = "info"
+        , servers = {@ClientCacheApplication.Server(host = "localhost", port = 40404)}
+        , locators = {@ClientCacheApplication.Locator(host = "localhost", port = 10334)
+})
+
 ```
 
 ## Note on tagging
